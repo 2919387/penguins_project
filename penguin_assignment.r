@@ -70,7 +70,7 @@ save_plot(qqplot_body, "figures/adelie_body_qq_plot.pdf", width = 9, height = 5)
 adelie_scatter <- plot_adelie_scatter(adelie_clean)
 
 #Save scatterplot as pdf ("adelie_scatter.pdf" in "figures")
-save_plot(adelie_scatter, "figures/adelie_scatter.pdf", width = 7, height = 5)
+save_plot(adelie_scatter, "figures/adelie_scatter_plot.pdf", width = 7, height = 5)
 
 #The relationship between the two variables appears linear, with no clear outliers.
 
