@@ -12,6 +12,7 @@ plot_adelie_scatter <- function(data){
   data %>%
   ggplot(aes(x = body_mass_g, y = culmen_length_mm)) +
   geom_point(colour = "black", alpha = 0.4) +
+  theme_bw() +
   labs(title = "Scatter-plot of body mass and culmen length in Adelie penguins",
         x = "Body mass (g)",
         y = "Culmen length (mm)")
@@ -23,6 +24,7 @@ plot_adelie_corr <- function(data){
   ggplot(aes(x = body_mass_g, y = culmen_length_mm)) +
   geom_point(colour = "black", alpha = 0.4) +
   sm_statCorr(corr_method = "pearson", colour = "blue") +
+  theme_bw() +
   labs(title = "Correlation between body mass and culmen length in Adelie penguins",
         x = "Body mass (g)",
         y = "Culmen length (mm)")
