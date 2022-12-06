@@ -5,7 +5,7 @@
 #LOAD THE DATA
 #-----------------------------
 
-#The working directory must be set to the directory "penguin_project".
+#The working directory must be set to the directory "penguins_project".
 
 #Install and load packages (found in "libraries.r" in the "functions" directory).
 #Note that the package smplot2 (used for the creation the figure) can be downloaded from the following link: https://rdrr.io/github/smin95/sesplot/
