@@ -30,7 +30,7 @@ plot_adelie_corr <- function(data){
         y = "Culmen length (mm)")
 }
 
-#Save figure as pdf
+#Save figure as pdf (under given file name), adjust width and height
 save_plot <- function(data, filename, width, height){
   pdf(file = filename, width, height)
   print(data)
