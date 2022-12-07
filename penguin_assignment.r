@@ -75,6 +75,7 @@ adelie_scatter <- plot_adelie_scatter(adelie_clean)
 save_plot(adelie_scatter, "figures/adelie_scatter_plot.pdf", width = 7, height = 5)
 
 #The relationship between the two variables appears linear, with no clear outliers.
+#Both of the assumptions are met, so a Pearson's correlation test can be run.
 
 #RUNNING THE TEST
 #A Pearson correlation test is applied, under the following null and alternative hypotheses.
