@@ -34,14 +34,6 @@ write.csv(penguins_now_clean, "data_clean/penguins_clean.csv")
 
 penguins_clean <- read.csv("data_clean/penguins_clean.csv")
 
-#The function "cleaning_adelie" (from "cleaning.r") filters the data to retain only body mass and culmen length for Adelie penguins, and removes rows for which these values are absent.
-adelie_now_clean <- cleaning_adelie(penguins_clean)
-
-#Save clean data (as "adelie_clean.csv", in directory "data_clean")
-write.csv(adelie_now_clean, "data_clean/adelie_clean.csv")
-
-adelie_clean <- read.csv("data_clean/adelie_clean.csv")
-
 
 
 
@@ -50,6 +42,16 @@ adelie_clean <- read.csv("data_clean/adelie_clean.csv")
 #-----------------------------
 #The code below uses a Peason correlation test to investigate if there is a significant correlation between body mass and culmen length in Adelie penguins.
 
+#FILTERING THE CLEAN DATA
+#The function "cleaning_adelie" (from "cleaning.r") filters the data to retain only body mass and culmen length for Adelie penguins, and removes rows for which these values are absent.
+adelie_now_clean <- cleaning_adelie(penguins_clean)
+
+#Save clean data (as "adelie_clean.csv", in directory "data_clean")
+write.csv(adelie_now_clean, "data_clean/adelie_clean.csv")
+
+adelie_clean <- read.csv("data_clean/adelie_clean.csv")
+
+#TESTING THE ASSUMPTIONS OF THE CORRELATION TEST
 #The Pearson correlation test assumes a normal distribution of both variables. This assumption is investigated by creating QQ plots for culmen length and body mass.
 #Create a QQ plot for culmen length (using the function "qqplot_plot" from "plotting.r")
 qqplot_culmen <- qqplot_plot(adelie_clean$culmen_length_mm)
@@ -74,6 +76,7 @@ save_plot(adelie_scatter, "figures/adelie_scatter_plot.pdf", width = 7, height =
 
 #The relationship between the two variables appears linear, with no clear outliers.
 
+#RUNNING THE TEST
 #A Pearson correlation test is applied, under the following null and alternative hypotheses.
 #H0: The correlation between Adelie body mass and culmen length is equal to 0.
 #H1: The correlation between Adelie body mass and culmen length is not equal to 0.
