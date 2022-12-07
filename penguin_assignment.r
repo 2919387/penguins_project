@@ -92,3 +92,5 @@ adelie_correlation <- plot_adelie_corr(adelie_clean)
 
 #Save figure as pdf (as "adelie_correlation_plot.pdf" in directory "figures") (using the function "save_plot" from "plotting.r")
 save_plot(adelie_correlation, "figures/adelie_correlation_plot.pdf", width = 7, height = 5)
+
+#From this figure and the statistical test above, it appears that Adelie body mass and culmen length correlate positively.
