@@ -18,7 +18,7 @@ plot_adelie_scatter <- function(data){
         y = "Culmen length (mm)")
 }
 
-#Create a scatterplot with a correlation line and the correlation coefficient and p-value of the correlation.
+#Create a scatterplot with a correlation line, 95% confidence interval, the correlation coefficient and p-value of the correlation.
 plot_adelie_corr <- function(data){
   data %>%
   ggplot(aes(x = body_mass_g, y = culmen_length_mm)) +
