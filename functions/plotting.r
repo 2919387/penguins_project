@@ -23,7 +23,7 @@ plot_adelie_corr <- function(data){
   data %>%
   ggplot(aes(x = body_mass_g, y = culmen_length_mm)) +
   geom_point(colour = "black", alpha = 0.4) +
-  sm_statCorr(corr_method = "pearson", colour = "blue") +
+  sm_statCorr(corr_method = "pearson", colour = "blue", se = TRUE) +
   theme_bw() +
   labs(title = "Correlation between body mass and culmen length in Adelie penguins",
         x = "Body mass (g)",
