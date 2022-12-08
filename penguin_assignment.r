@@ -40,7 +40,7 @@ penguins_clean <- read.csv("data_clean/penguins_clean.csv")
 
 #RUNNING A STATISTICAL TEST
 #-----------------------------
-#The code below uses a Peason correlation test to investigate if there is a significant correlation between body mass and culmen length in Adelie penguins.
+#The code below uses a Pearson correlation test to investigate if there is a significant correlation between body mass and culmen length in Adelie penguins.
 
 #FILTERING THE CLEAN DATA
 #The function "cleaning_adelie" (from "cleaning.r") filters the data to retain only body mass and culmen length for Adelie penguins, and removes rows for which these values are absent.
@@ -59,7 +59,7 @@ qqplot_culmen <- qqplot_plot(adelie_clean$culmen_length_mm)
 #Save QQ plot as pdf (as "adelie_culmen_qq_plot.pdf" in directory "figures") (using the function "save_plot" from "plotting.r")
 save_plot(qqplot_culmen, "figures/adelie_culmen_qq_plot.pdf", width = 9, height = 5)
 
-#Create a QQ plot for body length (using the function "qqplot_plot" from "plotting.r")
+#Create a QQ plot for body mass (using the function "qqplot_plot" from "plotting.r")
 qqplot_body <- qqplot_plot(adelie_clean$body_mass_g)
 
 #Save QQ plot as pdf (as "adelie_body_qq_plot.pdf" in directory "figures") (using the function "save_plot" from "plotting.r")
